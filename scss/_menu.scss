@@ -1,0 +1,59 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 10px 10px;
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+  
+      h1 {
+        @include title;
+        font-size: 1.5rem;
+      }
+  
+      & img {
+        border-radius: 50px;
+        z-index: 1;
+        margin-right: 35px;
+      }
+    }
+  
+    .menu-nav {
+      display: flex;
+      margin-right: 35px;
+  
+      &__item {
+        @include flexcenter;
+        margin: 0 0.8rem;
+        font-family: $font1;
+        padding: 0.5rem;
+  
+        &:hover {
+          background-color: $secondary-color;
+          border-radius: 7px;
+        }
+      }
+  
+      .active {
+        background: $secondary-color;
+        border-radius: 7px;
+      }
+  
+      &__link {
+        color: $color-text;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+  
+
+//   @for $i from 1 through 4 {
+//     .menu-nav__item:nth-child(#{$i}) {
+//       transition-delay: ($i * 0.1s) + 0.15s;
+//       }
+//     }

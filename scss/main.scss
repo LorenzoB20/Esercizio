@@ -1,4 +1,6 @@
 @import "variables";
+@import "menu";
+@import "responsive";
 
 * {
   box-sizing: border-box;
@@ -12,59 +14,6 @@ html {
 
 header {
   height: 10vh;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0 10px 10px;
-
-  &__logo {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-
-    h1 {
-      @include title;
-      font-size: 1.5rem;
-    }
-
-    & img {
-      border-radius: 50px;
-      z-index: 1;
-      margin-right: 35px;
-    }
-  }
-
-  .menu-nav {
-    display: flex;
-    margin-right: 35px;
-
-    &__item {
-      @include flexcenter;
-      margin: 0 0.8rem;
-      font-family: $font1;
-      padding: 0.5rem;
-
-      &:hover {
-        background-color: $secondary-color;
-        border-radius: 7px;
-      }
-    }
-
-    .active {
-      background: $secondary-color;
-      border-radius: 7px;
-    }
-
-    &__link {
-      color: $color-text;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 18px;
-    }
-  }
 }
 
 .home {
@@ -136,7 +85,7 @@ header {
     left: 5%;
     bottom: 3%;
     border: solid $color-text;
-    padding: 40px;
+    padding: 40px 200px 40px 40px;
 
     h2 {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -178,6 +127,7 @@ header {
   }
 
   &__buttons {
+    display: flex;
     margin-top: 4rem;
 
     .btn {
@@ -287,7 +237,7 @@ header {
 
   .griglia {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5em;
     grid-auto-rows: 33%;
     position: absolute;
